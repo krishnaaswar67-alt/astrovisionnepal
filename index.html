@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Astrovision Nepal | 360° Educational Dome Shows for Schools</title>
+<meta name="description" content="Portable 360° inflatable dome shows for Class 1–10 in Nepali and English. We bring the dome to your school.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F6F7FB;--surface:#fff;--ink:#12183A;--muted:#525a7a;--line:#dfe3f0;--night:#0B1330;--teal:#1FB5A0;--amber:#FFB454;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1329;--surface:#151c3a;--ink:#eef1ff;--muted:#a3abd0;--line:#263058;--teal:#3ED6C0}}
+:root[data-theme="dark"]{--bg:#0d1329;--surface:#151c3a;--ink:#eef1ff;--muted:#a3abd0;--line:#263058;--teal:#3ED6C0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 68px)}
+*,*:before,*:after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Sora',system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.65}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{line-height:1.2;margin:0 0 .5em}
+h2{font-size:clamp(1.6rem,3.5vw,2.3rem);font-weight:800}
+h3{font-size:1.08rem;font-weight:600}
+p{margin:0 0 1em;max-width:68ch}
+section{padding:76px 0}
+.lead{color:var(--muted);font-size:1.05rem}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:rgba(11,19,48,.94);color:#fff;backdrop-filter:blur(8px)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.logo{font-weight:800;text-decoration:none;white-space:nowrap}
+nav{display:flex;gap:18px;overflow-x:auto;font-size:.88rem;scrollbar-width:none}
+nav a{text-decoration:none;opacity:.85;white-space:nowrap}
+nav a:hover{opacity:1;color:var(--amber)}
+.hero{background:linear-gradient(180deg,#0B1330 0%,#16255a 100%);color:#fff;padding:60px 0 0;overflow:hidden}
+.hero .wrap{display:grid;gap:36px;grid-template-columns:1fr 1.05fr;align-items:center}
+.hero h1{font-size:clamp(2rem,4.8vw,3.2rem);font-weight:800}
+.hero p{color:#c5cdf0;font-size:1.06rem}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}
+.btn{display:inline-block;padding:13px 24px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--amber);font-size:.95rem;cursor:pointer;font-family:inherit;transition:transform .15s}
+.btn.fill{background:var(--amber);color:#0B1330}
+.btn.ghost{color:#fff;background:transparent}
+.btn:hover{transform:translateY(-2px)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:40px}
+.chips span{font-size:.82rem;padding:5px 12px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2)}
+.stage{padding-bottom:0}
+#cv{display:block;width:100%;aspect-ratio:2/1;border-radius:50% 50% 0 0/100% 100% 0 0;border:2px solid rgba(255,255,255,.5);border-bottom:0;background:#050a24;box-shadow:0 0 60px rgba(62,214,192,.25)}
+.floor{display:flex;justify-content:space-around;padding:8px 8% 0}
+.floor i{width:11px;height:11px;border-radius:50%;background:#fff;opacity:.8}
+.floor i:nth-child(3n){background:var(--amber)}
+.picks{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:16px 0 8px}
+.pick{padding:9px 6px;border-radius:12px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.06);color:#fff;font:inherit;font-size:.82rem;cursor:pointer}
+.pick[aria-pressed="true"]{background:var(--amber);color:#0B1330;border-color:var(--amber);font-weight:600}
+#cap{min-height:3.4em;font-size:.9rem;color:#c5cdf0;margin:0 0 20px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{position:relative;padding:0 0 18px 46px;counter-increment:s}
+.steps li:before{content:counter(s);position:absolute;left:0;top:0;width:30px;height:30px;border-radius:50%;background:var(--night);color:#fff;display:grid;place-items:center;font-size:.85rem;font-weight:600}
+.steps li:not(:last-child):after{content:"";position:absolute;left:14.5px;top:34px;bottom:2px;width:1px;background:var(--line)}
+.alt{background:var(--surface)}
+.programs{display:grid;gap:14px;margin-top:28px}
+.prog{display:grid;grid-template-columns:96px 1fr;gap:20px;background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:20px;align-items:center}
+.prog .em{height:76px;border-radius:14px;display:grid;place-items:center;font-size:2.2rem}
+.prog:nth-child(1) .em{background:linear-gradient(135deg,#bfe6ff,#e9f7ff)}
+.prog:nth-child(2) .em{background:linear-gradient(135deg,#2b2f77,#5b4bb7)}
+.prog:nth-child(3) .em{background:linear-gradient(135deg,#c8f0d0,#eaffef)}
+.prog:nth-child(4) .em{background:linear-gradient(135deg,#ffe2b8,#fff3df)}
+.prog p{margin:0;color:var(--muted)}
+.more{margin:16px 0 0;color:var(--muted);font-style:italic}
+.langs{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}
+.langs b{padding:8px 18px;border-radius:12px;background:var(--night);color:#fff;font-weight:600}
+.langs b+b{background:var(--teal);color:#0B1330}
+.tabs{display:flex;gap:8px;margin:24px 0 0}
+.tab{flex:1;padding:14px;border:1px solid var(--line);border-radius:14px 14px 0 0;background:var(--surface);color:var(--muted);font-family:inherit;font-weight:600;font-size:.95rem;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--night);color:#fff;border-color:var(--night)}
+.tabpanel{background:var(--surface);border:1px solid var(--line);border-radius:0 0 18px 18px;padding:26px}
+.tabpanel[hidden]{display:none}
+ul.tick{list-style:none;padding:0;margin:0}
+ul.tick li{padding:6px 0 6px 28px;position:relative}
+ul.tick li:before{content:"✓";position:absolute;left:0;color:var(--teal);font-weight:800}
+.dark{background:var(--night);color:#fff}
+.dark .lead,.dark p{color:#c5cdf0}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:28px 0}
+.stat{border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:18px}
+.stat b{display:block;font-size:1.5rem;color:var(--amber)}
+.stat span{font-size:.88rem;color:#c5cdf0}
+.list2{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;padding:0 20px}
+summary{cursor:pointer;padding:16px 0;font-weight:600;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";float:right;color:var(--teal);font-size:1.3rem;line-height:1}
+details[open] summary:after{content:"–"}
+details p{color:var(--muted);margin:0 0 16px}
+.partners{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.partners span{padding:10px 18px;border:1px solid var(--line);border-radius:12px;background:var(--bg);font-weight:600;font-size:.92rem}
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px}
+.line{display:block;padding:12px 0;border-bottom:1px solid var(--line);text-decoration:none;font-weight:600}
+.line small{display:block;color:var(--muted);font-weight:400}
+label{display:block;font-size:.88rem;font-weight:600;margin:0 0 14px}
+input,select,textarea{display:block;width:100%;margin-top:6px;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+#ok{display:none;margin-top:12px;color:var(--teal);font-weight:600}
+footer{background:var(--night);color:#c5cdf0;padding:32px 0;text-align:center;font-size:.9rem}
+footer p{margin:0 auto 4px}
+.btn.wa{background:#25D366;border-color:#25D366;color:#073b1d}
+.form-btns{display:flex;flex-wrap:wrap;gap:12px}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:20;display:flex;align-items:center;gap:8px;padding:12px 18px;border-radius:999px;background:#25D366;color:#073b1d;font-weight:600;font-size:.92rem;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.3)}
+@media(max-width:800px){.hero .wrap,.split,.contact,.list2{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.row{grid-template-columns:1fr}.prog{grid-template-columns:64px 1fr}.prog .em{height:64px;font-size:1.7rem}section{padding:52px 0}nav{font-size:.8rem}.logo{font-size:.9rem}.chips{margin-bottom:24px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="logo" href="#top">Astrovision Nepal</a>
+<nav aria-label="Main"><a href="#about">The dome</a><a href="#programs">Programs</a><a href="#levels">Classes</a><a href="#setup">Setup</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav></div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+<div>
+<h1>Learning beyond textbooks, inside a 360° sky</h1>
+<p>Astrovision Nepal brings a portable planetarium-style dome to your school. Students sit inside and watch full-dome films on space, Antarctica, climate and wildlife, in Nepali or English, for Class 1–10.</p>
+<div class="btns"><a class="btn fill" href="#contact">Book a dome show</a><a class="btn ghost" href="#programs">See the programs</a></div>
+<div class="chips"><span>Class 1–10</span><span>Nepali &amp; English</span><span>25–40 students per show</span><span>We come to your school</span></div>
+</div>
+<div class="stage">
+<canvas id="cv" role="img" aria-label="Animated preview of a 360° dome show"></canvas>
+<div class="floor" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div class="picks" role="group" aria-label="Preview a show">
+<button class="pick" data-s="space" aria-pressed="true">🚀 Space</button>
+<button class="pick" data-s="ice" aria-pressed="false">🌍 Antarctica</button>
+<button class="pick" data-s="earth" aria-pressed="false">🌱 Earth</button>
+<button class="pick" data-s="wild" aria-pressed="false">🐧 Wildlife</button></div>
+<p id="cap" aria-live="polite"></p>
+</div>
+</div></div>
+
+<section id="about"><div class="wrap split">
+<div><h2>What is an educational inflatable dome?</h2>
+<p class="lead">A portable, planetarium-style structure. Students sit inside and watch full-dome 360° educational videos projected above and around them.</p>
+<p>Because the picture surrounds them, students don't just read about the Solar System or a glacier. They feel like they are in it. That makes lessons exciting, memorable and easier to understand.</p>
+<p>The dome travels to you. Our trained team sets it up, runs the show and packs it away, so teachers only need to bring their class.</p></div>
+<div class="panel"><h3>How a school visit works</h3>
+<ol class="steps">
+<li><b>We agree a date</b><br><span class="lead">Schools, colleges, municipalities and organisations can all book.</span></li>
+<li><b>Our team sets up</b><br><span class="lead">Setup takes 45–60 minutes. We handle all technical work.</span></li>
+<li><b>Students watch the show</b><br><span class="lead">Groups of 25–40 enter in a controlled, supervised way.</span></li>
+<li><b>Learning continues in class</b><br><span class="lead">Teachers can follow the show with discussion and questions.</span></li>
+</ol></div>
+</div></section>
+
+<section id="programs" class="alt"><div class="wrap">
+<h2>Our educational programs</h2>
+<p class="lead">Every title is available in Nepali and English.</p>
+<div class="programs">
+<div class="prog"><div class="em" aria-hidden="true">🌍</div><div><h3>Antarctica: The Frozen World</h3><p>Explore the coldest continent on Earth. Understand glaciers, climate change, wildlife and Earth systems through stunning visuals.</p></div></div>
+<div class="prog"><div class="em" aria-hidden="true">🚀</div><div><h3>Space &amp; Solar System</h3><p>Journey through planets, stars and galaxies and learn space science in a fun, simple way.</p></div></div>
+<div class="prog"><div class="em" aria-hidden="true">🌱</div><div><h3>Earth, Environment &amp; Climate</h3><p>Learn about Earth's processes, global warming, oceans, forests and how to protect the environment.</p></div></div>
+<div class="prog"><div class="em" aria-hidden="true">🐧</div><div><h3>Wildlife &amp; Nature</h3><p>Discover animals, habitats and biodiversity from around the world.</p></div></div>
+</div>
+<p class="more">More educational titles are available. Ask us about them.</p>
+</div></section>
+
+<section id="levels"><div class="wrap">
+<h2>Made for every class, in your language</h2>
+<p class="lead">All dome shows come in both languages, for government, private and international schools alike.</p>
+<div class="langs"><b>नेपाली</b><b>English</b></div>
+<div class="tabs" role="tablist" aria-label="Class level">
+<button class="tab" role="tab" id="t1" aria-selected="true" aria-controls="p1">Class 1–5: Primary</button>
+<button class="tab" role="tab" id="t2" aria-selected="false" aria-controls="p2" tabindex="-1">Class 6–10: Secondary</button></div>
+<div class="tabpanel" id="p1" role="tabpanel" aria-labelledby="t1"><ul class="tick"><li>Story-based, visual learning</li><li>Simple explanations and narration</li><li>Focus on curiosity and imagination</li><li>A fun first introduction to science and nature</li></ul></div>
+<div class="tabpanel" id="p2" role="tabpanel" aria-labelledby="t2" hidden><ul class="tick"><li>Concept-based scientific learning</li><li>Content that supports the curriculum</li><li>Climate change and environmental awareness</li><li>Critical thinking and classroom discussion</li></ul></div>
+<p style="margin-top:20px">Narration is simple for younger students and concept-focused for senior classes, so every child can take part.</p>
+</div></section>
+
+<section id="setup" class="dark"><div class="wrap">
+<h2>Dome and technical setup</h2>
+<p class="lead">Astrovision Nepal's trained team handles all setup, operation and technical management.</p>
+<div class="stats">
+<div class="stat"><b>360°</b><span>Portable inflatable dome</span></div>
+<div class="stat"><b>HD</b><span>Full-dome projection</span></div>
+<div class="stat"><b>25–40</b><span>Students per show</span></div>
+<div class="stat"><b>45–60 min</b><span>Setup time</span></div>
+</div>
+<div class="list2"><div><h3>Safety and comfort come first</h3>
+<ul class="tick"><li>Fire-retardant dome material</li><li>Proper ventilation system</li><li>Controlled entry and exit</li><li>Trained operators and supervisors present</li></ul></div>
+<div><h3>Also included</h3><ul class="tick"><li>Surround sound audio</li><li>Full setup and pack-down by our team</li><li>Mobile service: we come to your school</li></ul></div></div>
+</div></section>
+
+<section id="why"><div class="wrap split">
+<div><h2>Why schools choose Astrovision Nepal</h2>
+<p class="lead">Lessons that students can see, feel and remember.</p>
+<div class="partners"><span>Schools &amp; colleges</span><span>Municipalities &amp; local governments</span><span>NGOs &amp; INGOs</span><span>CSR &amp; corporate education</span></div></div>
+<ul class="tick"><li>Makes learning visual, interactive and memorable</li><li>Supports school curriculum objectives</li><li>High student engagement</li><li>Works for school events, science days and educational tours</li><li>Mobile setup, so no travel for your students</li></ul>
+</div></section>
+
+<section id="faq" class="alt"><div class="wrap">
+<h2>Questions schools ask</h2>
+<details><summary>Which classes is the dome for?</summary><p>Class 1 to Class 10, in Nepali-medium and English-medium schools.</p></details>
+<details><summary>Which languages are the shows in?</summary><p>Every show is available in both Nepali and English.</p></details>
+<details><summary>How many students can watch at once?</summary><p>25 to 40 students per show.</p></details>
+<details><summary>How long does setup take, and who does it?</summary><p>Setup takes 45–60 minutes. Astrovision Nepal's trained team handles setup, operation and all technical management.</p></details>
+<details><summary>Is it safe for children?</summary><p>Yes. The dome uses fire-retardant material and a proper ventilation system, entry and exit are controlled, and trained operators and supervisors are present.</p></details>
+<details><summary>Who can book a show?</summary><p>Schools, colleges, municipalities, local governments, NGOs, INGOs and CSR or corporate education programs.</p></details>
+<details><summary>How do I get dates and details for my school?</summary><p>Call or email us, or send the booking form below, and we will get back to you.</p></details>
+</div></section>
+
+<section id="contact"><div class="wrap">
+<h2>Book a dome show</h2>
+<p class="lead">Tell us about your school and we'll get back to you with availability.</p>
+<div class="contact">
+<div>
+<a class="line" href="tel:+9779700044269"><small>Ncell</small>+977 9700044269</a>
+<a class="line" href="tel:+9779764399847"><small>NTC</small>+977 9764399847</a>
+<a class="line" href="https://wa.me/9779700044269?text=Hello%20Astrovision%20Nepal%2C%20I%20would%20like%20to%20know%20more%20about%20the%20dome%20shows." target="_blank" rel="noopener"><small>WhatsApp</small>Chat on +977 9700044269</a>
+<a class="line" href="mailto:astrovisionnepal360@gmail.com"><small>Email</small>astrovisionnepal360@gmail.com</a>
+<span class="line"><small>Location</small>Kathmandu, Nepal</span>
+</div>
+<form class="panel" id="f">
+<div class="row"><label>Your name<input name="n" required></label><label>School or organisation<input name="o" required></label></div>
+<div class="row"><label>Classes<select name="c"><option>Class 1–5</option><option>Class 6–10</option><option>Class 1–10</option></select></label>
+<label>Language<select name="l"><option>Nepali</option><option>English</option><option>Both</option></select></label></div>
+<label>Phone or email<input name="p" required></label>
+<label>Message (optional)<textarea name="m" rows="3" placeholder="Preferred date, number of students, program"></textarea></label>
+<div class="form-btns"><button class="btn fill" type="submit">Send by email</button><button class="btn wa" type="button" id="wa">Send on WhatsApp</button></div>
+<div id="ok" role="status">Your email app is opening with the request filled in. Just press send.</div>
+</form>
+</div></div></section>
+</main>
+
+<footer><div class="wrap"><p><b>Astrovision Nepal</b> · Kathmandu</p><p>Let's bring learning beyond textbooks and into a 360° experience.</p></div></footer>
+
+<a class="fab" href="https://wa.me/9779700044269?text=Hello%20Astrovision%20Nepal%2C%20I%20would%20like%20to%20know%20more%20about%20the%20dome%20shows." target="_blank" rel="noopener" aria-label="Chat with Astrovision Nepal on WhatsApp">💬 WhatsApp us</a>
+
+<script>
+(function(){
+var tabs=document.querySelectorAll('.tab');
+tabs.forEach(function(t){t.addEventListener('click',function(){
+tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;
+document.getElementById(x.getAttribute('aria-controls')).hidden=!on;});});});
+document.getElementById('f').addEventListener('submit',function(e){
+e.preventDefault();var d=new FormData(e.target);
+var body='Name: '+d.get('n')+'\nSchool/Organisation: '+d.get('o')+'\nClasses: '+d.get('c')+'\nLanguage: '+d.get('l')+'\nContact: '+d.get('p')+'\n\n'+(d.get('m')||'');
+document.getElementById('ok').style.display='block';
+location.href='mailto:astrovisionnepal360@gmail.com?subject='+encodeURIComponent('Dome show booking: '+d.get('o'))+'&body='+encodeURIComponent(body);
+});
+
+document.getElementById('wa').addEventListener('click',function(){
+var f=document.getElementById('f');if(!f.reportValidity())return;var d=new FormData(f);
+var t='Hello Astrovision Nepal, I would like to book a dome show.\nName: '+d.get('n')+'\nSchool/Organisation: '+d.get('o')+'\nClasses: '+d.get('c')+'\nLanguage: '+d.get('l')+'\nContact: '+d.get('p')+(d.get('m')?'\nMessage: '+d.get('m'):'');
+window.open('https://wa.me/9779700044269?text='+encodeURIComponent(t),'_blank','noopener');
+});
+
+var cv=document.getElementById('cv'),c=cv.getContext('2d'),W=1,H=1,T=0,S='space',auto=true,
+reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches,P=[];
+for(var i=0;i<170;i++)P.push([Math.random(),Math.random(),Math.random()*1.6+.4,Math.random()*6]);
+var caps={space:'Space & Solar System: travel past planets, stars and galaxies.',
+ice:'Antarctica: see glaciers, aurora skies and the frozen world up close.',
+earth:'Earth, Environment & Climate: watch our planet turn and learn how to protect it.',
+wild:'Wildlife & Nature: meet animals and habitats from around the world.'};
+function rs(){var r=cv.getBoundingClientRect(),d=Math.min(window.devicePixelRatio||1,2);W=cv.width=Math.max(1,r.width*d);H=cv.height=Math.max(1,r.height*d)}
+function bg(a,b){var g=c.createLinearGradient(0,0,0,H);g.addColorStop(0,a);g.addColorStop(1,b);c.fillStyle=g;c.fillRect(0,0,W,H)}
+function dot(x,y,r){c.beginPath();c.arc(x,y,r,0,7);c.fill()}
+function stars(n){var u=W/700;for(var i=0;i<n;i++){var s=P[i];
+c.fillStyle='rgba(255,255,255,'+(.45+.5*Math.sin(T*2+s[3]))+')';dot((s[0]*W+T*4*s[2]*u)%W,s[1]*H,s[2]*u)}}
+var draw={
+space:function(){bg('#050a24','#1b2266');stars(170);
+c.shadowColor='#ffb454';c.shadowBlur=45;c.fillStyle='#ffb454';dot(W*.12,H*.55,H*.13);c.shadowBlur=0;
+var cx=W*.62,cy=H*.48,r=H*.16,g=c.createRadialGradient(cx-r/3,cy-r/3,r/5,cx,cy,r);
+g.addColorStop(0,'#f2c48a');g.addColorStop(1,'#a35a2a');c.fillStyle=g;dot(cx,cy,r);
+c.strokeStyle='rgba(255,230,190,.7)';c.lineWidth=H*.012;c.beginPath();c.ellipse(cx,cy,r*1.9,r*.5,-.35,0,7);c.stroke();
+var a=T*.6;c.fillStyle='#7fd6ff';dot(W*.4+Math.cos(a)*W*.12,H*.5+Math.sin(a)*H*.2,H*.035)},
+ice:function(){bg('#02101f','#0b3a5c');stars(60);
+for(var k=0;k<3;k++){c.beginPath();for(var x=0;x<=W;x+=W/40){var y=H*.3+Math.sin(x/W*6+T*.8+k)*H*.08+k*H*.07;x?c.lineTo(x,y):c.moveTo(x,y)}
+c.strokeStyle=k==1?'rgba(160,120,255,.35)':'rgba(62,214,192,.4)';c.lineWidth=H*.07;c.stroke()}
+c.fillStyle='#e9f5ff';c.beginPath();c.moveTo(0,H);c.lineTo(0,H*.84);c.lineTo(W*.18,H*.72);c.lineTo(W*.32,H*.86);c.lineTo(W*.55,H*.7);c.lineTo(W*.75,H*.85);c.lineTo(W*.9,H*.76);c.lineTo(W,H*.86);c.lineTo(W,H);c.fill();
+c.fillStyle='#fff';for(var i=0;i<90;i++){var s=P[i];dot((s[0]*W+Math.sin(T+s[3])*20)%W,(s[1]*H+T*H*.08*s[2])%H,s[2]*W/500)}},
+earth:function(){bg('#02040f','#0b1440');stars(120);
+var cx=W/2,cy=H*.62,r=H*.42,g=c.createRadialGradient(cx-r/3,cy-r/3,r/6,cx,cy,r);
+g.addColorStop(0,'#3ea0ff');g.addColorStop(1,'#0a2f7a');c.save();c.shadowColor='#6cc8ff';c.shadowBlur=40;c.fillStyle=g;dot(cx,cy,r);c.restore();
+c.save();c.beginPath();c.arc(cx,cy,r,0,7);c.clip();
+for(var k=0;k<5;k++){var px=((k*.29+T*.02)%1.4-.2)*r*2.4+cx-r*1.2;c.fillStyle='#3aa864';c.beginPath();c.ellipse(px,cy+Math.sin(k*2.3)*r*.5,r*.28,r*.17,k,0,7);c.fill()}
+c.fillStyle='rgba(255,255,255,.4)';for(var j=0;j<4;j++){c.beginPath();c.ellipse(cx-r+((j*.31+T*.035)%1.2)*r*2,cy+Math.cos(j*3)*r*.45,r*.3,r*.06,0,0,7);c.fill()}
+c.restore()},
+wild:function(){bg('#1d1447','#ff9a5a');
+c.fillStyle='#ffe0a0';c.shadowColor='#ffd27a';c.shadowBlur=40;dot(W*.5,H*.66,H*.1);c.shadowBlur=0;
+c.fillStyle='#0a1a14';for(var i=0;i<12;i++){var x=i*W/11,h=H*(.28+.12*Math.sin(i*2.1));c.beginPath();c.moveTo(x-W*.05,H);c.lineTo(x,H-h);c.lineTo(x+W*.05,H);c.fill()}
+c.fillRect(0,H*.94,W,H*.06);
+c.fillStyle='#ffe27a';c.shadowColor='#ffe27a';c.shadowBlur=12;for(var f=0;f<30;f++){var s=P[f];dot(s[0]*W+Math.sin(T+s[3])*W*.03,H*.5+s[1]*H*.42+Math.cos(T*1.3+s[3])*H*.03,H*.008)}c.shadowBlur=0}
+};
+function frame(){if(!reduce)T+=.016;draw[S]();if(!reduce)requestAnimationFrame(frame)}
+function set(s){S=s;document.getElementById('cap').textContent=caps[s];
+document.querySelectorAll('.pick').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.s===s)});if(reduce){T=2;draw[S]()}}
+document.querySelectorAll('.pick').forEach(function(b){b.addEventListener('click',function(){auto=false;set(b.dataset.s)})});
+var order=['space','ice','earth','wild'];
+if(!reduce)setInterval(function(){if(auto)set(order[(order.indexOf(S)+1)%4])},7000);
+window.addEventListener('resize',function(){rs();if(reduce)draw[S]()});
+rs();set('space');if(!reduce)requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
